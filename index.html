@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestros de Corazón y Pedagogos del Futuro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 50%, #6BCB77 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tab-active {
+            border-bottom: 4px solid #FF6B6B;
+            color: #FF6B6B;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-slate-800 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-500 to-amber-400 flex items-center justify-center text-white text-2xl shadow-lg">
+                    <i class="fa-solid fa-apple-whole"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-amber-600">ProfePedia 🍎</h1>
+                    <p class="text-xs text-slate-500">Pasión por enseñar, vocación para transformar</p>
+                </div>
+            </div>
+            <nav class="flex space-x-1 sm:space-x-4">
+                <button onclick="switchTab('home')" id="btn-home" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-pink-600 transition tab-active">Inicio</button>
+                <button onclick="switchTab('material')" id="btn-material" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-pink-600 transition">Material Didáctico</button>
+                <button onclick="switchTab('pedagogia')" id="btn-pedagogia" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-pink-600 transition">Zona Pedagoga</button>
+                <button onclick="switchTab('motivacion')" id="btn-motivacion" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-pink-600 transition">Inspiración 💡</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full">
+
+        <!-- TAB 1: HOME -->
+        <section id="tab-home" class="space-y-12">
+            <!-- Hero Banner -->
+            <div class="gradient-bg rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
+                <div class="z-10 max-w-xl space-y-4">
+                    <span class="bg-white/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">Comunidad Educativa 2026</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">¡Donde la educación se convierte en magia! ✨</h2>
+                    <p class="text-lg text-white/90">Un espacio creado por y para maestros de corazón, educadores apasionados y futuros pedagogos que buscan inspirar el mundo.</p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <button onclick="switchTab('material')" class="bg-white text-pink-600 font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-slate-100 transition flex items-center space-x-2">
+                            <i class="fa-solid fa-folder-open"></i> <span>Ver Materiales</span>
+                        </button>
+                        <button onclick="switchTab('pedagogia')" class="bg-slate-900/40 text-white font-bold px-6 py-3 rounded-xl backdrop-blur-md hover:bg-slate-900/60 transition flex items-center space-x-2">
+                            <i class="fa-solid fa-graduation-cap"></i> <span>Teorías Pedagógicas</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 z-10 text-9xl animate-bounce">
+                    🎨
+                </div>
+            </div>
+
+            <!-- Features Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover border-t-4 border-pink-500">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dinámicas y Recursos Listos</h3>
+                    <p class="text-slate-600 text-sm">Descubre juegos de integración, dinámicas grupales rompehielos y herramientas creativas descargables para tus clases.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover border-t-4 border-amber-500">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Teorías del Desarrollo</h3>
+                    <p class="text-slate-600 text-sm">Resúmenes claros, infografías conceptuales y enfoques clave de Piaget, Vygotsky, Montessori y el Humanismo para futuros pedagogos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover border-t-4 border-emerald-500">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Chispa de Inspiración</h3>
+                    <p class="text-slate-600 text-sm">Generador de frases motivadoras para esos días en los que necesitas recordar por qué elegiste la profesión más hermosa del mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: MATERIAL DIDACTICO -->
+        <section id="tab-material" class="hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-extrabold text-slate-800">🎒 Material Didáctico y Dinámicas de Clase</h2>
+                <p class="text-slate-600">Herramientas prácticas que puedes aplicar hoy mismo en tu aula para encender la curiosidad de tus alumnos.</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+                <div class="relative w-full sm:w-96">
+                    <i class="fa-solid fa-search absolute left-4 top-3.5 text-slate-400"></i>
+                    <input type="text" id="searchMaterial" onkeyup="filterMaterials()" placeholder="Buscar dinámica o recurso..." class="w-full pl-11 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 text-sm">
+                </div>
+                <div class="flex gap-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
+                    <button onclick="filterCategory('all')" class="px-4 py-2 rounded-xl text-xs font-bold bg-pink-600 text-white shadow-sm filter-btn">Todos</button>
+                    <button onclick="filterCategory('dinamica')" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 filter-btn">Dinámicas</button>
+                    <button onclick="filterCategory('recurso')" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 filter-btn">Recursos Visuales</button>
+                    <button onclick="filterCategory('juego')" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 filter-btn">Juegos Mentales</button>
+                </div>
+            </div>
+
+            <!-- Material Grid -->
+            <div id="materialGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically populated or static rich cards -->
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="dinamica" data-title="El Semáforo de las Emociones">
+                    <span class="bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Dinámica Grupal</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">🚦 El Semáforo de las Emociones</h3>
+                    <p class="text-slate-600 text-sm mb-4">Ideal para iniciar la clase. Cada alumno comparte cómo se siente rojo (necesita calma), amarillo (atento) o verde (listo para aprender).</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 10 min</span>
+                        <button onclick="openResourceModal('El Semáforo de las Emociones', 'Esta dinámica permite regular el clima emocional del aula. Materiales: Círculos de cartulina roja, amarilla y verde. Paso 1: Preguntar al grupo en qué color se ubican hoy. Paso 2: Escuchar brevemente las razones. Paso 3: Transicionar hacia el enfoque de la clase.')" class="text-pink-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="recurso" data-title="Lluvia de Ideas con Mapas Mentales">
+                    <span class="bg-amber-100 text-amber-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Recurso Visual</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">🧠 Mapas Mentales Colaborativos</h3>
+                    <p class="text-slate-600 text-sm mb-4">Técnica visual para conectar conceptos previos con los nuevos temas usando colores y dibujos rápidos en lugar de solo texto.</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 20 min</span>
+                        <button onclick="openResourceModal('Mapas Mentales Colaborativos', 'Herramienta clave del constructivismo. Se coloca un concepto central en la pizarra y los alumnos suman ramas con palabras clave y stickers o dibujos rápidos para fomentar el aprendizaje visual y asociativo.')" class="text-amber-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="juego" data-title="Trivia Relámpago Interactiva">
+                    <span class="bg-emerald-100 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Juego Mental</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">⚡ Trivia Relámpago con Post-its</h3>
+                    <p class="text-slate-600 text-sm mb-4">Para evaluar conocimientos previos o cerrar una unidad de forma divertida dividiendo al grupo en equipos de retos rápidos.</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 15 min</span>
+                        <button onclick="openResourceModal('Trivia Relámpago con Post-its', 'Los alumnos escriben preguntas clave en notas adhesivas y se las lanzan a otros equipos para responder en menos de 30 segundos. Fomenta la agilidad mental y la coevaluación.')" class="text-emerald-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="dinamica" data-title="La Telaraña de la Confianza">
+                    <span class="bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Dinámica Grupal</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">🕸️ La Telaraña de la Confianza</h3>
+                    <p class="text-slate-600 text-sm mb-4">Excelente para integración escolar. Se lanza un ovillo de lana diciendo una cualidad del compañero que lo recibe.</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 15 min</span>
+                        <button onclick="openResourceModal('La Telaraña de la Confianza', 'Material: Un ovillo de estambre. Al final se forma una red visual que demuestra cómo todos están conectados y cómo las palabras de aliento sostienen al grupo.')" class="text-pink-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="recurso" data-title="Tarjetas de Autoevaluación Metacognitiva">
+                    <span class="bg-amber-100 text-amber-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Recurso Visual</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">🔍 Mis 3 Descubrimientos de Hoy</h3>
+                    <p class="text-slate-600 text-sm mb-4">Formato imprimible o digital para que los estudiantes reflexionen sobre qué aprendieron, qué les costó y qué les quedó duda.</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 5 min</span>
+                        <button onclick="openResourceModal('Tarjetas de Autoevaluación Metacognitiva', 'Ayuda a desarrollar el pensamiento crítico y la autorregulación del aprendizaje según las teorías cognitivistas modernas.')" class="text-amber-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-md card-hover material-card" data-category="juego" data-title="Caza del Tesoro Conceptual">
+                    <span class="bg-emerald-100 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Juego Mental</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">🗺️ Caza del Tesoro Conceptual</h3>
+                    <p class="text-slate-600 text-sm mb-4">Pistas repartidas por el aula donde cada respuesta correcta lleva a los alumnos a descubrir un enigma sobre el tema de estudio.</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-slate-100">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> 30 min</span>
+                        <button onclick="openResourceModal('Caza del Tesoro Conceptual', 'Transforma el salón en un espacio de aventura guiada por el descubrimiento autónomo y colaborativo.')" class="text-emerald-600 font-bold text-sm hover:underline">Ver Guía Completa →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: ZONA PEDAGOGICA -->
+        <section id="tab-pedagogia" class="hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-extrabold text-slate-800">🎓 Zona de Estudio para Pedagogos</h2>
+                <p class="text-slate-600">Todo lo que necesitas repasar, estudiar y dominar sobre las grandes teorías del desarrollo humano y corrientes pedagógicas.</p>
+            </div>
+
+            <!-- Theory selector buttons -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <button onclick="showTheory('piaget')" id="tab-piaget" class="p-4 bg-white rounded-2xl shadow-sm border-2 border-pink-500 font-bold text-pink-600 flex flex-col items-center gap-2 transition theory-tab">
+                    <span class="text-2xl">👶</span> <span>Constructivismo (Piaget)</span>
+                </button>
+                <button onclick="showTheory('vygotsky')" id="tab-vygotsky" class="p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-amber-400 font-bold text-slate-700 flex flex-col items-center gap-2 transition theory-tab">
+                    <span class="text-2xl">🤝</span> <span>Sociocultural (Vygotsky)</span>
+                </button>
+                <button onclick="showTheory('humanismo')" id="tab-humanismo" class="p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-emerald-400 font-bold text-slate-700 flex flex-col items-center gap-2 transition theory-tab">
+                    <span class="text-2xl">🌱</span> <span>Humanismo (Rogers/Maslow)</span>
+                </button>
+                <button onclick="showTheory('cognitivismo')" id="tab-cognitivismo" class="p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 font-bold text-slate-700 flex flex-col items-center gap-2 transition theory-tab">
+                    <span class="text-2xl">💡</span> <span>Cognitivismo (Ausubel/Bruner)</span>
+                </button>
+            </div>
+
+            <!-- Theory Content Display Box -->
+            <div id="theory-content" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-full md:w-1/3 bg-pink-50 p-6 rounded-2xl border border-pink-100 space-y-4">
+                        <h3 id="theory-title" class="text-2xl font-extrabold text-pink-700">Jean Piaget y el Constructivismo</h3>
+                        <p id="theory-subtitle" class="text-sm font-semibold text-slate-600">El desarrollo cognitivo por etapas</p>
+                        <hr class="border-pink-200">
+                        <div class="space-y-2 text-sm text-slate-700">
+                            <p><strong>Concepto clave:</strong> <span id="theory-key">Estadios evolutivos y esquemas mentales.</span></p>
+                            <p><strong>Rol docente:</strong> <span id="theory-role">Facilitador del descubrimiento activo.</span></p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3 space-y-4">
+                        <h4 class="text-xl font-bold text-slate-800">Resumen Esencial para Pedagogos</h4>
+                        <p id="theory-desc" class="text-slate-600 leading-relaxed">
+                            Jean Piaget postuló que los niños no son "adultos en miniatura", sino que construyen su propio conocimiento activamente interactuando con el entorno. Su teoría se divide en cuatro etapas principales: Sensoriomotora, Preoperacional, Operacional Concreta y Operacional Formal. Para el pedagogo, esto significa que el contenido escolar debe adaptarse estrictamente a la madurez cognitiva del alumno.
+                        </p>
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-amber-900 text-sm flex items-start space-x-3">
+                            <i class="fa-solid fa-lightbulb text-amber-600 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="font-bold">Tip para Exámenes de Pedagogía:</span>
+                                <span id="theory-tip">Recuerda siempre los términos clave: Asimilación, Acomodación y Conflicto Cognitivo. Son infaltables en cualquier análisis pedagógico.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: MOTIVACION & INSPIRACION -->
+        <section id="tab-motivacion" class="hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-extrabold text-slate-800">💡 Chispa de Inspiración Docente</h2>
+                <p class="text-slate-600">Un espacio para recargar el alma de energía positiva y pasión por la enseñanza.</p>
+            </div>
+
+            <!-- Quote Generator Box -->
+            <div class="bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl text-center max-w-3xl mx-auto space-y-6">
+                <div class="text-5xl opacity-80">❝</div>
+                <blockquote id="quoteText" class="text-2xl sm:text-3xl font-bold leading-snug">
+                    "Enseñar es dejar una huella en el corazón de una persona para toda la vida."
+                </blockquote>
+                <p id="quoteAuthor" class="text-purple-200 font-medium">— Anónimo</p>
+                <div>
+                    <button onclick="generateNewQuote()" class="bg-white text-purple-700 font-bold px-8 py-3 rounded-2xl shadow-lg hover:bg-purple-50 transition transform active:scale-95 flex items-center justify-center space-x-2 mx-auto">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Otra Frase Inspiradora</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Virtual Wall of Gratitude / Appreciation Note -->
+            <div class="bg-white rounded-3xl p-8 shadow-md max-w-3xl mx-auto space-y-6 border border-slate-100">
+                <h3 class="text-xl font-extrabold text-slate-800 flex items-center space-x-2">
+                    <i class="fa-solid fa-note-sticky text-pink-500"></i>
+                    <span>Muro de Notas para Maestros de Corazón</span>
+                </h3>
+                <p class="text-sm text-slate-600">Escribe una nota rápida para ti mismo o un mensaje motivador para otros colegas.</p>
+                
+                <div class="space-y-4">
+                    <textarea id="noteInput" rows="3" placeholder="Ej. Hoy recordé por qué amo ver la cara de mis alumnos cuando entienden algo nuevo..." class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500 text-sm"></textarea>
+                    <div class="flex justify-end">
+                        <button onclick="postNote()" class="bg-pink-600 text-white font-bold px-6 py-2.5 rounded-xl hover:bg-pink-700 transition text-sm flex items-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i> <span>Compartir al Muro</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="notesContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                    <div class="bg-amber-100 p-4 rounded-2xl text-amber-900 text-sm shadow-sm relative transform -rotate-1">
+                        <p class="font-medium">"Un buen maestro puede inspirar esperanza, encender la imaginación y inculcar el amor al aprendizaje."</p>
+                        <span class="block text-xs text-amber-700 mt-2 font-bold">— Brad Henry</span>
+                    </div>
+                    <div class="bg-pink-100 p-4 rounded-2xl text-pink-900 text-sm shadow-sm relative transform rotate-1">
+                        <p class="font-medium">"Educar no es llenar una cubeta, sino encender un fuego."</p>
+                        <span class="block text-xs text-pink-700 mt-2 font-bold">— William Butler Yeats</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Material Details -->
+    <div id="resourceModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-2xl relative transform transition-all">
+            <button onclick="closeResourceModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalCategoryTag" class="inline-block bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Recurso Didáctico</div>
+            <h3 id="modalTitle" class="text-2xl font-extrabold text-slate-800">Título del Material</h3>
+            <p id="modalDesc" class="text-slate-600 leading-relaxed text-sm">Descripción completa del recurso y metodología de aplicación en clase.</p>
+            <div class="pt-4 border-t border-slate-100 flex justify-end gap-3">
+                <button onclick="closeResourceModal()" class="px-5 py-2.5 bg-slate-100 text-slate-700 font-bold rounded-xl text-sm hover:bg-slate-200 transition">Cerrar</button>
+                <button onclick="alertBox('¡Recurso guardado en tus favoritos con éxito! 🍎')" class="px-5 py-2.5 bg-pink-600 text-white font-bold rounded-xl text-sm hover:bg-pink-700 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-bookmark"></i> <span>Guardar Recurso</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Notification Box (No alert used) -->
+    <div id="customAlert" class="fixed bottom-6 right-6 bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="alertMessage" class="text-sm font-medium">Notificación</span>
+    </div>
+
+    <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-center text-slate-500 text-sm">
+        <p>Hecho con ❤️ para maestros de corazón, educadores y futuros pedagogos. ¡Transformando el futuro desde el aula!</p>
+    </footer>
+
+    <script>
+        // Tab Navigation Logic
+        function switchTab(tabId) {
+            const tabs = ['home', 'material', 'pedagogia', 'motivacion'];
+            tabs.forEach(t => {
+                document.getElementById('tab-' + t).classList.add('hidden');
+                document.getElementById('btn-' + t).classList.remove('tab-active');
+            });
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).classList.add('tab-active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Material Category Filter
+        function filterCategory(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-pink-600', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-pink-600', 'text-white');
+
+            const cards = document.querySelectorAll('.material-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Material Search
+        function filterMaterials() {
+            const query = document.getElementById('searchMaterial').value.toLowerCase();
+            const cards = document.querySelectorAll('.material-card');
+            cards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Theory Data Object
+        const theories = {
+            piaget: {
+                title: "Jean Piaget y el Constructivismo",
+                subtitle: "El desarrollo cognitivo por etapas",
+                key: "Estadios evolutivos y esquemas mentales.",
+                role: "Facilitador del descubrimiento activo.",
+                desc: "Jean Piaget postuló que los niños construyen su propio conocimiento activamente interactuando con su entorno. Sus cuatro etapas (Sensoriomotora, Preoperacional, Concreta y Formal) demuestran que el pensamiento evoluciona de lo físico a lo abstracto. Para el pedagogo, la enseñanza debe ajustarse al nivel de madurez mental del estudiante.",
+                tip: "Recuerda siempre los términos clave: Asimilación, Acomodación y Conflicto Cognitivo. Fundamentales en cualquier examen de pedagogía."
+            },
+            vygotsky: {
+                title: "Lev Vygotsky y el Enfoque Sociocultural",
+                subtitle: "El aprendizaje guiado y la cultura",
+                key: "Zona de Desarrollo Próximo (ZDP) y Andamiaje.",
+                role: "Mediador cultural y guía experto.",
+                desc: "Vygotsky argumentó que el aprendizaje humano es un proceso social. La interacción con adultos, maestros y compañeros más avanzados permite al estudiante alcanzar niveles superiores de desarrollo (la Zona de Desarrollo Próximo). El andamiaje educativo ofrece el apoyo temporal necesario hasta que el alumno logra autonomía.",
+                tip: "En tus ensayos pedagógicos, destaca cómo el lenguaje y la cultura moldean directamente la cognición humana."
+            },
+            humanismo: {
+                title: "Carl Rogers y Abraham Maslow",
+                subtitle: "Educación Humanista y Centrada en la Persona",
+                key: "Autoactualización, empatía y clima emocional seguro.",
+                role: "Facilitador empático del crecimiento personal.",
+                desc: "El humanismo pedagógico pone al estudiante en el centro como un ser íntegro, con emociones, necesidades y potencial único. Maslow con su pirámide de necesidades y Rogers con el aprendizaje significativo vivencial defienden que sin seguridad emocional y aceptación incondicional, el aprendizaje profundo no ocurre.",
+                tip: "Palabras clave esenciales: Empatía, clima afectivo, autorrealización y motivación intrínseca."
+            },
+            cognitivismo: {
+                title: "David Ausubel y Jerome Bruner",
+                subtitle: "Cognitivismo y Aprendizaje Significativo",
+                key: "Conocimientos previos y estructura mental de procesamiento.",
+                role: "Diseñador de experiencias estructuradas y puentes cognitivos.",
+                desc: "El cognitivismo analiza cómo la mente procesa, almacena y recupera información. Ausubel introdujo el 'aprendizaje significativo', donde lo nuevo se ancla firmemente a los conceptos que el alumno ya posee en su estructura cognitiva (organizadores previos).",
+                tip: "Conecta siempre los nuevos temas pedagógicos con las experiencias previas reales de los estudiantes."
+            }
+        };
+
+        function showTheory(theoryKey) {
+            const tabs = ['piaget', 'vygotsky', 'humanismo', 'cognitivismo'];
+            tabs.forEach(t => {
+                const btn = document.getElementById('tab-' + t);
+                btn.classList.remove('border-pink-500', 'border-amber-400', 'border-emerald-400', 'border-indigo-400', 'text-pink-600');
+                btn.classList.add('border-transparent', 'text-slate-700');
+            });
+
+            const activeBtn = document.getElementById('tab-' + theoryKey);
+            activeBtn.classList.remove('border-transparent', 'text-slate-700');
+            if (theoryKey === 'piaget') activeBtn.classList.add('border-pink-500', 'text-pink-600');
+            if (theoryKey === 'vygotsky') activeBtn.classList.add('border-amber-400', 'text-amber-600');
+            if (theoryKey === 'humanismo') activeBtn.classList.add('border-emerald-400', 'text-emerald-600');
+            if (theoryKey === 'cognitivismo') activeBtn.classList.add('border-indigo-400', 'text-indigo-600');
+
+            const data = theories[theoryKey];
+            document.getElementById('theory-title').innerText = data.title;
+            document.getElementById('theory-subtitle').innerText = data.subtitle;
+            document.getElementById('theory-key').innerText = data.key;
+            document.getElementById('theory-role').innerText = data.role;
+            document.getElementById('theory-desc').innerText = data.desc;
+            document.getElementById('theory-tip').innerText = data.tip;
+        }
+
+        // Quotes Generator
+        const quotes = [
+            { quote: "Enseñar es dejar una huella en el corazón de una persona para toda la vida.", author: "Anónimo" },
+            { quote: "Un maestro afecta la eternidad; nunca puede decir dónde se detiene su influencia.", author: "Henry Adams" },
+            { quote: "Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo.", author: "Benjamin Franklin" },
+            { quote: "La educación no es llenar un cubo, sino encender un fuego.", author: "W.B. Yeats" },
+            { quote: "Los niños son como esponjas; absorben todo el amor, la paciencia y la dedicación que les das.", author: "Maestra Vocacional" },
+            { quote: "Educar la mente sin educar el corazón no es educar en absoluto.", author: "Aristóteles" }
+        ];
+
+        function generateNewQuote() {
+            const random = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quoteText').innerText = `"${random.quote}"`;
+            document.getElementById('quoteAuthor').innerText = `— ${random.author}`;
+        }
+
+        // Post Note to Wall
+        function postNote() {
+            const input = document.getElementById('noteInput');
+            const val = input.value.trim();
+            if(!val) {
+                alertBox('Por favor escribe un mensaje motivador antes de compartir.');
+                return;
+            }
+            const container = document.getElementById('notesContainer');
+            const colors = ['bg-pink-100 text-pink-900', 'bg-amber-100 text-amber-900', 'bg-emerald-100 text-emerald-900', 'bg-purple-100 text-purple-900'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomRotate = Math.random() > 0.5 ? 'rotate-1' : '-rotate-1';
+
+            const newNote = document.createElement('div');
+            newNote.className = `${randomColor} p-4 rounded-2xl text-sm shadow-sm relative transform ${randomRotate}`;
+            newNote.innerHTML = `<p class="font-medium">"${val}"</p><span class="block text-xs mt-2 font-bold">— Docente Apasionado</span>`;
+            
+            container.prepend(newNote);
+            input.value = '';
+            alertBox('¡Tu nota inspiradora ha sido publicada con éxito! ✨');
+        }
+
+        // Modal Controls
+        function openResourceModal(title, desc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('resourceModal').classList.remove('hidden');
+        }
+
+        function closeResourceModal() {
+            document.getElementById('resourceModal').classList.add('hidden');
+        }
+
+        // Custom alert box replacement
+        function alertBox(msg) {
+            const alertEl = document.getElementById('customAlert');
+            document.getElementById('alertMessage').innerText = msg;
+            alertEl.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                alertEl.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
