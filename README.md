@@ -1,4 +1,4 @@
-Corazón
+
 Maestros de Corazón es un proyecto web enfocado en la educación, diseñado para servir como una plataforma de apoyo pedagógico, recursos didácticos y estrategias de enseñanza inclusiva y constructivista.
 📌 Tabla de Contenidos
  Acerca del Proyecto
